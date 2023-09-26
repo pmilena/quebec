@@ -1,0 +1,250 @@
+:root{
+    --primary-color: #34558b; /* Azul principal */
+    --primary-color-dark: #162542; /* Azul escuro */
+    --seconde-color: #6b90c1; /* Azul secundário */
+    --yellow-gold-color:#A86200; /* Amarelo dourado */
+    --gray-color: #888888; /* Cinza */
+    --light-gray-color: #f5f5f5; /* Cinza claro */
+    --dark-gray-color: #4e4c4c; /* Branco */
+}
+
+html{
+    font-family: 'Comfortaa', cursive;
+    font-size: 62.5%;
+}
+
+main{
+    height: 100vh;   
+}
+
+.maxWidth{
+    max-width: 70.25em;
+    margin: 0 auto;
+}
+
+.top-header{
+    text-align: center;
+}
+
+.top_header_nav{
+    background-color: var(--primary-color);  
+}
+
+.top_header_logo{
+    margin-top: 1.2em;
+}
+
+.top_header_nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.top_header_nav a{
+    text-decoration: none;
+    display: block;
+    padding: 0.8em;
+    font-size: 1em;
+    color: var(--light-gray-color);
+    transition: background-color 0.5s; 
+    font-size: 1.2em;  
+}
+
+.top_header_nav a:hover{
+    background-color: color-mix(in srgb, var(--yellow-gold-color), white 70%); 
+    color: var(--dark-gray-color)
+}
+
+.heroBanner{
+    text-align: center;
+    background-color: var(--light-gray-color);
+    padding: 1em;  
+}
+
+.heroBanner_title{
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: var(--primary-color-dark);
+    font-weight: bold;
+}
+
+.heroBanner_subtitle{
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: color-mix(in srgb, var(--primary-color-dark), white 30%);
+}
+
+.heroBanner_btn {
+    display: inline-block;
+    padding: 1em 0.8em;
+    border: 1px solid transparent;
+    background-color:var(--yellow-gold-color);
+    text-decoration: none;
+    color: var(--light-gray-color);
+    width: fit-content;
+    margin: 0.8em auto;
+    border-radius: 0.3em;
+    box-sizing: border-box;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.heroBanner_btn:hover{
+    background-color:color-mix(in srgb, var(--yellow-gold-color), white 30%);
+}
+
+.heroBanner_video iframe{
+    border: 1px solid transparent;
+    border-radius: 1em;
+    display: none;
+}
+
+.middleContent {
+    text-align: center;
+    padding: 2em;
+    background-color: var(--seconde-color)
+}
+
+.middleContent a{
+    text-decoration: none;
+    color: var(--light-gray-color); 
+}
+
+.middleContent span[class^="icon-"]{
+    display: inline-block;
+    font-size: 4em;
+    color: var(--yellow-gold-color);
+    text-shadow: 2px 2px 8px var(--light-gray-color);
+    transition: transform .3s;  
+}
+
+.middleContent span[class^="icon-"]:hover{
+    transform: scale(1.2);
+    text-shadow: 4px 4px 8px var(--light-gray-color);
+}
+
+.middleContent_title{
+    font-size: 1.5em;
+    color: var(--primary-color-dark)
+}
+
+.middleContent p{
+    font-size: 1.1em;
+    line-height: 1.5em;  
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.col{
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.mainContent_img img{
+    display: block; 
+    width: 100%;
+}
+
+.mainContent{
+    padding: 2em;
+}
+
+.mainContent_content h3{
+    font-size: 1.5em;
+    color: var(--primary-color-dark)
+}
+
+.mainContent_content p{
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+footer{
+   background-color: var(--primary-color-dark);
+   padding: 1.5em;
+   box-sizing: border-box;
+   text-align: center;
+   color: var(--light-gray-color)
+}
+
+
+@media screen and (min-width: 48.75em){
+
+    .top-header{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top_header_nav{
+        background-color: transparent;
+    }
+
+    .top_header_nav li{
+        display: inline-block;
+    }
+
+    .top_header_nav a:hover{
+        border-radius: 0.5em;
+        background-color: color-mix(in srgb, var(--yellow-gold-color), white 90%); 
+    }
+
+    .top_header_logo{
+        margin-left: 2em;
+    }
+
+    .top_header_nav a{
+        color: var(--dark-gray-color);
+        transition: none; 
+    }
+   
+    .heroBanner{
+        margin-top: 1em;
+        background-image: linear-gradient(transparent, var(--primary-color)),url(../imagens/heroBanner1.png);
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        position: sticky;
+    }
+
+    .heroBanner_title{
+        color:  var(--light-gray-color);
+        text-shadow: 4px 4px 6px var(--primary-color-dark);
+    }
+
+    .heroBanner_subtitle{
+        color:  var(--light-gray-color);
+        margin-bottom: 1.5em;
+    }
+
+    .heroBanner_btn{
+        display: none;
+    }
+
+    .heroBanner_subtitle::after{
+        content: url(https://www.youtube.com/watch?v=ri8x8jqnLUs&t=7s);
+    }
+
+    .heroBanner_video iframe{  
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+
+    .middleContent{
+        background-color: var(--light-gray-color);
+    }
+
+    .middleContent a{
+        text-decoration: none;
+        color: var(--primary-color) 
+    }
+    
+    .col-md-6{
+        width: calc(50% - 6em);
+        flex: 1 0 auto;
+    }
